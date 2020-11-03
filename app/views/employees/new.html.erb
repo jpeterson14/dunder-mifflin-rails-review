@@ -1,0 +1,13 @@
+<h1> New Employee </h1>
+<%= form_for @employee, method: :post do |f| %>
+    Fist Name: <%= f.text_field :first_name %> <br>
+    Last Name: <%= f.text_field :last_name %> <br>
+    Alias: <%= f.text_field :alias %> <br>
+    Title: <%= f.text_field :title %> <br>
+    Office: <%= f.text_field :office %> <br>
+    Picture: <%= f.text_field :img_url %> <br>
+    Dog: <%= f.collection_select :dog_id, Dog.all, :id, :name %>
+    <%= f.submit %>
+    <% end %>
+
+
